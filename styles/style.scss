@@ -70,7 +70,8 @@ body {
 }
 .information {
     &__gradient {
-        height: 100vh;
+  min-height: 100%;
+  height: 100vh;
         background: linear-gradient(360deg, rgb(238, 242, 246) 1.09%, rgb(255, 255, 255) 100%);
     }
     &__wrapper {
