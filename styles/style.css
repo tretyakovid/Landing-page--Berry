@@ -1,0 +1,339 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+:root {
+  --white-color: #fff;
+  --primary-color: rgb(18, 25, 38);
+  --navy-blue-color: rgb(54, 65, 82);
+  --transition: 0.2s;
+  --small-border-radius: 4px;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+.wrapper {
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1152px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  color: var(--primary-color);
+}
+.header__wrapper {
+  justify-content: space-between;
+}
+.header__nav {
+  display: flex;
+  gap: 20px;
+}
+.header__nav-link {
+  padding: 6px 8px;
+  border-radius: var(--small-border-radius);
+  transition: var(--transition);
+}
+.header__nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.highlight {
+  padding: 6px 16px;
+  color: var(--white-color);
+  background-color: rgb(103, 58, 183);
+  transition: var(--transition);
+}
+.highlight:hover {
+  color: unset;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgb(103, 58, 183);
+}
+
+.link {
+  line-height: 1.75;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--small-border-radius);
+}
+
+.information__gradient {
+  height: 100vh;
+  background: linear-gradient(360deg, rgb(238, 242, 246) 1.09%, rgb(255, 255, 255) 100%);
+}
+.information__wrapper {
+  align-items: center;
+  justify-content: start;
+  background-position: right 24px center;
+  background-size: 672px 371px;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/hero-dashboard.png);
+}
+.information__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.information__heading {
+  text-align: left;
+  line-height: 1.167;
+  width: 100%;
+  max-width: 480px;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: rgb(18, 25, 38);
+}
+.information__heading p {
+  color: rgb(33, 150, 243);
+}
+.information__subheading {
+  line-height: 1.334em;
+  width: 100%;
+  max-width: 480px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  font-size: 1.125rem;
+  color: var(--navy-blue-color);
+}
+.information__link-group {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.information__link--alt {
+  color: rgb(33, 150, 243);
+  padding: 8px 11px;
+}
+.information__link--alt:hover {
+  background-color: rgba(33, 150, 243, 0.04);
+}
+.information__img-group {
+  width: 100%;
+  position: relative;
+}
+.information__hero-widget {
+  animation: 10s linear 0s infinite normal none running slideY;
+  position: absolute;
+  max-width: 100%;
+  top: 26px;
+  left: 86px;
+  width: 227px;
+  filter: drop-shadow(rgba(33, 150, 243, 0.3) 0px 0px 50px);
+}
+.information__hero-widget-1 {
+  animation: 10s linear 0s infinite normal none running slideY;
+  position: absolute;
+  bottom: 57px;
+  right: 122px;
+  width: 155px;
+  max-width: 100%;
+  filter: drop-shadow(rgba(33, 150, 243, 0.3) 0px 0px 50px);
+}
+
+@keyframes slideY {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+@media (max-width: 1024px) {
+  .information__hero-widget {
+    top: 0;
+  }
+  .information__hero-widget-1 {
+    right: 150px;
+  }
+}
+@media (max-width: 1000px) {
+  .information__wrapper {
+    background-image: none;
+  }
+  .information__content {
+    justify-content: center;
+    align-items: center;
+  }
+  .information__heading, .information__subheading {
+    text-align: center;
+    max-width: unset;
+  }
+  .information__img-group {
+    display: none;
+  }
+}
+@media (max-width: 635px) {
+  .header__nav {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .information__heading {
+    font-size: 2rem;
+  }
+  .information__subheading {
+    font-size: 1rem;
+  }
+  .information__link-group {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
