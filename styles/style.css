@@ -152,6 +152,7 @@ a {
 }
 
 body {
+padding-top: 120px;
   font-family: "Poppins";
 }
 
@@ -168,6 +169,7 @@ body {
 }
 
 .header {
+   z-index: 100;
   position: fixed;
   top: 0;
   width: 100%;
@@ -212,7 +214,8 @@ body {
 }
 
 .information__gradient {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background: linear-gradient(360deg, rgb(238, 242, 246) 1.09%, rgb(255, 255, 255) 100%);
 }
 .information__wrapper {
@@ -221,7 +224,7 @@ body {
   background-position: right 24px center;
   background-size: 672px 371px;
   background-repeat: no-repeat;
-  background-image: url(/assets/img/hero-dashboard.png);
+  background-image: url(../assets/img/hero-dashboard.png);
 }
 .information__content {
   display: flex;
